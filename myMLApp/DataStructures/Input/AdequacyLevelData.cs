@@ -5,7 +5,7 @@
     // input for prediction operations
     // - First 4 properties are inputs/features used to predict the label
     // - Label is what you are predicting, and is only set when training
-    public class AdequacyLevelData
+    public class AdequacyLevelData : InputData
     {
         public float YearsInAgile;
         public float YearsInNET;
@@ -14,5 +14,10 @@
         public float AdequacyLevelInNET;
         public float AdequacyLevelInSQL;
         public string Label;
+
+        public override string ToString()
+        {
+            return $"YearsInAgile {YearsInAgile}, YearsInNET {YearsInNET}, YearsInSQL {YearsInSQL}, AdequacyLevelInAgile {AdequacyLevelInAgile}, AdequacyLevelInNET {AdequacyLevelInNET}, AdequacyLevelInSQL {AdequacyLevelInSQL}";
+        }
     }
 }
